@@ -13,7 +13,7 @@ export default function Home() {
 
       <main className={styles.main}>
             <p>
-              Terraform TEST
+              Terraform TEST 1
             </p>
       </main>
     </div>
