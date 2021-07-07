@@ -1,7 +1,9 @@
 **/*.tfvars
-**/node_modules/**
+node_modules
 variables.tf
 serviceAccount.json
 .terraform
 **/*.tfstate
 **/*.tfvars
+
+build
