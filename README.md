@@ -16,3 +16,5 @@ Step 6: Setup `backend.tf` and run `terraform init` | Verify that a default.tfst
 Step 7: Setup Providers
 
 Step 8: Create App Engine Application
+
+Step 9: Setup GitHub Actions
