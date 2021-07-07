@@ -14,3 +14,5 @@ Step 5: Create a Service Account
 Step 6: Setup `backend.tf` and run `terraform init` | Verify that a default.tfstate is now stored in your bucket
 
 Step 7: Setup Providers
+
+Step 8: Create App Engine Application
