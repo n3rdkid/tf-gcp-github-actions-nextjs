@@ -32,11 +32,11 @@ jobs:
 
       - name: Initializing dependencies
         if: steps.npm-cache.outputs.cache-hit != 'true'
-        run:  cd client && yarn install
+        run:  yarn install
 
       - name: Build the repository
         run: |
-          cd client && yarn build
+          yarn build
 
       - name: Setup Cloud SDK
         uses: google-github-actions/setup-gcloud@v0.2.0
