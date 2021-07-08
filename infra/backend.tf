@@ -1,6 +1,6 @@
 terraform {
   backend "gcs" { 
-    bucket  = "terraform-gcp-githubactions-tfstate"
+    bucket  = "githubactions-terraform-artifact"
     credentials = "../serviceAccount.json"
   }
 }
