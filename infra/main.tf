@@ -11,7 +11,7 @@ resource "google_app_engine_standard_app_version" "app_engine_next" {
 
   deployment={
     zip{
-      source_url = {var.project}
+      source_url = {var.artifacts_url}
     }
   }
 
