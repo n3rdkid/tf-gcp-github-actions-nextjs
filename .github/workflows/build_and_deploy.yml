@@ -48,7 +48,7 @@ jobs:
         run: gcloud app deploy app.yaml --quiet --project ${{secrets.GCP_PROJECT_ID}}
       
       - name : Create artifact.zip
-        run: zip -r ./artifact.zip . -x */.git/*
+        run: git archive --format=zip HEAD -o artifact.zip
       
       - id: upload-artifact
         name: Upload artifact file
