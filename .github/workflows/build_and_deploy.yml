@@ -56,7 +56,7 @@ jobs:
         with:
           path: ./artifact.zip
           destination: ${{secrets.GCP_ARTIFACT_BUCKET}}
-        credentials: ${{ secrets.GCP_SERVICE_KEY }}
+          credentials: ${{ secrets.GCP_SERVICE_KEY }}
 
       # - id: deploy
       #   name: Deploy to app engine
