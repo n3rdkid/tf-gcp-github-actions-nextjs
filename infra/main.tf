@@ -2,6 +2,7 @@
 resource "google_app_engine_application" "app" {
   project     = "${var.project}"
   location_id = "${var.region}"
+  serving_status = "USER_DISABLED"
 }
 # 
 resource "google_app_engine_standard_app_version" "app_engine_next" {

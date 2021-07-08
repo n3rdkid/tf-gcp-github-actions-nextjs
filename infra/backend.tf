@@ -1,7 +1,7 @@
 terraform {
   backend "gcs" { 
-    bucket  = "githubactions-terraform-artifact"
-    
+    bucket  = "n3rd-test-artifact"
+
     credentials = "../serviceAccount.json"
   }
 }
