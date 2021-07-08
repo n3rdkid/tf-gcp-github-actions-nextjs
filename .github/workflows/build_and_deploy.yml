@@ -50,7 +50,7 @@ jobs:
       - name : Create artifact.zip
         # run: git archive --format=zip HEAD -o artifact.zip
         run: |
-          apt-get -q update && apt-get -qqy install zip bzip2 gzip
+          sudo apt-get -q update && apt-get -qqy install zip bzip2 gzip
           zip -r ./artifact.zip . -x */.git/*
 
       
