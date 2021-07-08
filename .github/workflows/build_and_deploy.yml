@@ -46,6 +46,16 @@ jobs:
 
       - name: Deploy to App Engine
         run: gcloud app deploy app.yaml --quiet --project ${{secrets.GCP_PROJECT_ID}}
+      
+      - name : Create artifact.zip
+        run: zip -r ./artifact.zip . -x */.git/*
+      
+      - id: Upload artifact file
+        uses: google-github-actions/upload-cloud-storage@main
+        with:
+          path: ./artifact.zip
+          destination: ${{secrets.GCP_ARTIFACT_BUCKET}}
+
       # - id: deploy
       #   name: Deploy to app engine
       #   uses: google-github-actions/deploy-appengine@main
