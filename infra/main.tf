@@ -9,9 +9,9 @@ resource "google_app_engine_standard_app_version" "app_engine_next" {
   service    = "default"
   runtime    = "nodejs14"
 
-  deployment={
+  deployment{
     zip{
-      source_url = {var.artifacts_url}
+      source_url = var.artifacts_url
     }
   }
 
