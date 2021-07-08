@@ -49,7 +49,9 @@ jobs:
       
       - name : Create artifact.zip
         # run: git archive --format=zip HEAD -o artifact.zip
-        run: zip -r ./artifact.zip . -x */.git/*
+        run: |
+          apt-get -q update && apt-get -qqy install zip bzip2 gzip
+          zip -r ./artifact.zip . -x */.git/*
 
       
       - id: upload-artifact
